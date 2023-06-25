@@ -5,23 +5,23 @@ class Pessoa {
   @PrimaryGeneratedColumn({ primaryKeyConstraintName: `CODIGO_PESSOA` })
   codigoPessoa: number;
 
-  @Column()
+  @Column({ name: 'NOME' })
   nome: string;
 
-  @Column()
+  @Column({ name: 'SOBRENOME' })
   sobrenome: string;
 
-  @Column('int')
+  @Column({ name: 'IDADE' })
   idade: number;
 
-  @Column()
+  @Column({ name: 'LOGIN' })
   login: string;
 
-  @Column('int')
-  status: number;
+  @Column({ name: 'SENHA' })
+  senha: string;
 
-  @Column()
-  enderecos: string;
+  @Column({ name: 'STATUS' })
+  status: number;
 }
 
 export default Pessoa;
