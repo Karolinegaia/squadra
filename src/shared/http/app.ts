@@ -17,12 +17,12 @@ app.use(
     if (error instanceof AppError) {
       return response.status(error.statusCode).json({
         status: 'error',
-        message: error.message,
+        messagem: error.message,
       });
     }
     return response.status(500).json({
       status: 'error',
-      message: 'Internal Server error',
+      messagem: 'Internal Server error',
     });
   },
 );

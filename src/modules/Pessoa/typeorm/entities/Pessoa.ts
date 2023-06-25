@@ -2,7 +2,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('TB_PESSOA')
 class Pessoa {
-  @PrimaryGeneratedColumn('identity')
+  @PrimaryGeneratedColumn({ primaryKeyConstraintName: `CODIGO_PESSOA` })
   codigoPessoa: number;
 
   @Column()

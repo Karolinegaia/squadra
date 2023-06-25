@@ -2,25 +2,25 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('TB_ENDERECO')
 class Endereco {
-  @PrimaryGeneratedColumn('identity')
+  @PrimaryGeneratedColumn({ primaryKeyConstraintName: 'CODIGO_ENDERECO' })
   codigoEndereco: number;
 
-  @Column('int')
+  @Column({ foreignKeyConstraintName: 'CODIGO_PESSOA' })
   codigoPessoa: number;
 
-  @Column('int')
+  @Column({ foreignKeyConstraintName: 'CODIGO_BAIRRO' })
   codigoBairro: number;
 
-  @Column()
+  @Column({ name: 'NOME_RUA' })
   nomeRua: string;
 
-  @Column()
+  @Column({ name: 'NOME' })
   numero: string;
 
-  @Column()
+  @Column({ name: 'COMPLEMENTO' })
   complemento: string;
 
-  @Column()
+  @Column({ name: 'CEP' })
   cep: string;
 }
 

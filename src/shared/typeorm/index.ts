@@ -1,3 +1,8 @@
+import Bairro from '@modules/Bairro/entities/Bairro';
+import Endereco from '@modules/Endereco/typeorm/entities/Endereco';
+import Uf from '@modules/Estado/typeorm/entities/Uf';
+import Municipio from '@modules/Municipio/typeorm/entities/Municipio';
+import Pessoa from '@modules/Pessoa/typeorm/entities/Pessoa';
 import { DataSource } from 'typeorm';
 
 export const AppDataSource = new DataSource({
@@ -9,7 +14,7 @@ export const AppDataSource = new DataSource({
   database: 'free',
   synchronize: true,
   logging: false,
-  entities: [],
+  entities: [Bairro, Endereco, Uf, Municipio, Pessoa],
   subscribers: [],
   migrations: [],
 });

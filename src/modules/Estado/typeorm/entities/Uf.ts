@@ -2,16 +2,16 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('TB_UF')
 class Uf {
-  @PrimaryGeneratedColumn('identity')
+  @PrimaryGeneratedColumn({ primaryKeyConstraintName: 'CODIGO_UF' })
   codigoUf: number;
 
-  @Column()
+  @Column({ name: 'SIGLA' })
   sigla: string;
 
-  @Column()
+  @Column({ name: 'NOME' })
   nome: string;
 
-  @Column('int')
+  @Column({ name: 'STATUS' })
   status: number;
 }
 

@@ -1,9 +1,7 @@
+import bairroRota from '@modules/Bairro/rotas/rotas';
 import { Router } from 'express';
 
 const routes = Router();
-
-routes.get('/', (request, response) => {
-  return response.json({ messagem: 'Hello Dev' });
-});
+routes.use('/bairro', bairroRota);
 
 export default routes;
