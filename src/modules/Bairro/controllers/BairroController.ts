@@ -14,17 +14,17 @@ export default class BairroController {
     });
     return response.json(bairro);
   }
-  // public async index(request: Request, response: Response): Promise<Response> {
-  //   listarBairro = new ListarBairro();
 
-  //   const bairros = await listarBairro.execute();
-  //   return response.json(bairros);
-  // }
-  // public async show(request: Request, response: Response): Promise<Response> {
-  //   const { codigoBairro } = request.params;
-  //   const showBairro = new ShowListarBairro();
-  //   const bairro = await showBairro.execute({ codigoBairro });
+  public async index(request: Request, response: Response): Promise<Response> {
+    const listarBairro = new ListarBairro();
+    const bairros = await listarBairro.execute();
+    return response.json(bairros);
+  }
+  public async show(request: Request, response: Response): Promise<Response> {
+    const { codigoBairro } = request.params;
+    const showBairro = new showListarBairro();
+    const bairro = await showBairro.execute({ codigoBairro });
 
-  //   return response.json(bairro);
-  // }
+    return response.json(bairro);
+  }
 }

@@ -21,7 +21,7 @@ class CriarBairro {
     status,
   }: IRequest) {
     const bairrosRepository = AppDataSource.getRepository(Bairro);
-    const bairroExists = await BairroRepository.findOneBy({ codigoBairro });
+    const bairroExists = await BairroRepository.findOne({ codigoBairro });
 
     if (bairroExists) {
       throw new AppError('Já existe um bairro cadastrado com esse código');
