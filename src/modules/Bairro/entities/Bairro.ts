@@ -5,7 +5,7 @@ class Bairro {
   @PrimaryGeneratedColumn({ primaryKeyConstraintName: 'CODIGO_BAIRRO' })
   codigoBairro: number;
 
-  @Column({ foreignKeyConstraintName: 'CODIGO_MUNICIPIO' })
+  @Column({ name: 'CODIGO_MUNICIPIO' })
   codigoMunicipio: number;
 
   @Column({ name: 'NOME' })
